@@ -1,18 +1,20 @@
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>color changing via range video</title>
   </head>
   <body>
-    <label>red:</label>
-    <input type="range" id="rangeRed" value="0" min="0" max="255" />
-    <label>green:</label>
-    <input type="range" id="rangeGreen" value="0" min="0" max="255" />
-    <label>blue:</label>
-    <input type="range" id="rangeBlue" value="0" min="0" max="255" />
-
+    <div class="container">
+      <label>red:</label>
+      <input type="range" id="rangeRed" value="0" min="0" max="255" />
+      <label>green:</label>
+      <input type="range" id="rangeGreen" value="0" min="0" max="255" />
+      <label>blue:</label>
+      <input type="range" id="rangeBlue" value="0" min="0" max="255" />
+    </div>
     <script>
       function changeColor() {
         let red = document.getElementById("rangeRed").value;
@@ -20,7 +22,7 @@
         let blue = document.getElementById("rangeBlue").value;
         let color = "rgb(" + red + "," + green + "," + blue + ")";
         document.body.style.backgroundColor = color;
-        document.getElementById("colorOutput").innerHtml = ": " + color;
+        document.innerHtml = ": " + color;
       }
 
       document
